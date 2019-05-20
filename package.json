@@ -1,0 +1,63 @@
+{
+  "name": "easyapp-template-package",
+  "version": "0.1.0",
+  "description": "A template for package with easyapp",
+  "main": "index.ts",
+  "umd:main": "dist/lib.js",
+  "module": "dist/lib.mjs",
+  "source": "index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest --coverage",
+    "lint": "eslint ./src/**/*.ts",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chersquwn/easyapp-template-package.git"
+  },
+  "keywords": [
+    "easyapp",
+    "easyapp-template",
+    "cli"
+  ],
+  "author": "Chersquwn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chersquwn/easyapp-template-package/issues"
+  },
+  "homepage": "https://github.com/Chersquwn/easyapp-template-package#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@types/jest": "^24.0.13",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-chersquwn": "^1.2.2",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.3.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.7",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.17.1",
+    "typescript": "^3.4.5"
+  }
+}
