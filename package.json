@@ -8,7 +8,7 @@
   "source": "index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --no-compress --no-sourcemap",
     "dev": "microbundle watch",
     "test": "jest --coverage",
     "lint": "eslint ./src/**/*.ts",
@@ -37,6 +37,13 @@
   ],
   "author": "Chersquwn",
   "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
   "bugs": {
     "url": "https://github.com/Chersquwn/easyapp-template-package/issues"
   },
