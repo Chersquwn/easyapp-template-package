@@ -11,11 +11,11 @@
     "build": "microbundle --no-compress --no-sourcemap",
     "dev": "microbundle watch",
     "test": "jest --coverage",
-    "lint": "eslint ./src/**/*.ts",
+    "lint": "eslint ./src/**/*.{js,ts,tsx}",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "src/**/*.{js,ts,tsx}": [
       "eslint --fix",
       "prettier --write",
       "git add"
@@ -57,7 +57,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
-    "eslint-config-chersquwn": "^1.2.2",
+    "eslint-config-chersquwn": "^1.2.3",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.3.0",
