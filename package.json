@@ -11,7 +11,7 @@
     "build": "microbundle --no-compress --no-sourcemap",
     "dev": "microbundle watch",
     "test": "jest --coverage",
-    "lint": "eslint ./src/**/*.{js,ts,tsx}",
+    "lint": "eslint src/**/*.{js,ts,tsx}",
     "precommit": "lint-staged"
   },
   "lint-staged": {
